@@ -1,17 +1,46 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url("https://fonts.googleapis.com/css2?family=Ubuntu:wght@300&display=swap");
+
 :root {
   --bg-color: #242420;
   --pri-color: #adad70;
   --sec-color: #99997d;
 }
 
-body {
-  background: var(--bg-color);
-}
+@layer base {
+  body {
+    @apply bg-[var(--bg-color)];
+    @apply font-[Ubuntu];
+  }
 
-h1 {
-  color: var(--pri-color);
-}
+  .logo {
+    @apply w-[4rem] h-[4rem];
+  }
 
-h4 {
-  color: var(--sec-color);
+  .navigation {
+    @apply fixed w-full h-[5rem] flex justify-between items-center px-4 text-gray-200;
+  }
+
+  .default-nav {
+    @apply hidden md:flex;
+  }
+
+  .navigation li a {
+    @apply px-4 mx-1 cursor-pointer;
+  }
+
+  .mobile-menu {
+    @apply md:hidden z-10;
+  }
+
+  .mobile-nav {
+    @apply md:hidden absolute top-0 left-0 w-full h-screen flex flex-col justify-center items-center;
+  }
+
+  .mobile-nav li {
+    @apply py-3 text-2xl;
+  }
 }
