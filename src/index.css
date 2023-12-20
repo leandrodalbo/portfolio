@@ -1,0 +1,17 @@
+:root {
+  --bg-color: #242420;
+  --pri-color: #adad70;
+  --sec-color: #99997d;
+}
+
+body {
+  background: var(--bg-color);
+}
+
+h1 {
+  color: var(--pri-color);
+}
+
+h4 {
+  color: var(--sec-color);
+}
