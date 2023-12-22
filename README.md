@@ -1,9 +1,0 @@
-# Portfolio Project
-
-## Scripts
-
-### `npm start`
-
-### `npm test`
-
-### `npm run build`
