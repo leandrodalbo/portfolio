@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { HeaderService } from "./HederService";
 import { FiAlignJustify } from "react-icons/fi";
+import "./style.css";
 
 interface HeaderProps {
   service: HeaderService;

@@ -1,0 +1,49 @@
+@import "../../index.css";
+
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 2rem 10%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 100;
+  background: transparent;
+}
+
+.logo {
+  font-size: 2rem;
+  color: var(--text-color);
+  font-weight: 600;
+  text-transform: capitalize;
+}
+
+.menu-icon {
+  font-size: 3rem;
+  color: var(--text-color);
+  cursor: pointer;
+  display: none;
+}
+
+.navbar a {
+  font-size: 1.5rem;
+  color: var(--text-color);
+  font-weight: 500;
+  margin-left: 3rem;
+  transition: 1s;
+  text-transform: uppercase;
+}
+
+.navbar a:hover {
+  color: var(--main-color);
+}
+
+a.active {
+  text-decoration: underline;
+}
+
+a.inactive {
+  text-decoration: none;
+}
