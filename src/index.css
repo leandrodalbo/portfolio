@@ -1,10 +1,9 @@
-@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700");
 
 :root {
   --bg-color: #080b29;
-  --second-color: #111342;
   --text-color: #ededed;
-  --main-color: #84d3f59e;
+  --main-color: #80b4e5e0;
 }
 
 * {
@@ -26,4 +25,9 @@ html {
 body {
   background: var(--bg-color);
   color: var(--text-color);
+}
+
+section {
+  min-height: 100vh;
+  padding: 10rem 10% 2rem;
 }

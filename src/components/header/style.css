@@ -1,5 +1,3 @@
-@import "../../index.css";
-
 .header {
   position: fixed;
   top: 0;
@@ -37,11 +35,16 @@
 }
 
 .navbar a:hover {
-  color: var(--main-color);
+  border-top: solid var(--main-color) 0.2rem;
+  border-left: solid var(--main-color) 0.1rem;
+  border-radius: 10%;
+  transition: 0.1s;
 }
 
 a.active {
-  text-decoration: underline;
+  border-top: solid var(--text-color) 0.2rem;
+  border-left: solid var(--text-color) 0.1rem;
+  border-radius: 10%;
 }
 
 a.inactive {

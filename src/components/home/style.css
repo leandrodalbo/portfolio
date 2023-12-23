@@ -1,0 +1,54 @@
+.home {
+  display: flex;
+  align-items: center;
+  padding: 0 5%;
+}
+
+.home-content {
+  margin: 10% 10% 10% 10%;
+  text-align: center;
+}
+
+.home-content h1 {
+  font-size: 4rem;
+  font-weight: 700;
+  line-height: 1.5;
+  margin: 5% 0% 0% 0%;
+}
+
+.home-content h3 {
+  color: transparent;
+  -webkit-text-stroke: 0.7px var(--main-color);
+  font-size: 3rem;
+  font-weight: 700;
+  line-height: 1.5;
+}
+
+.home-content p {
+  font-size: 1.5rem;
+  margin: 10%rem 10%rem 10%rem 10%rem;
+  padding: 10%rem 10%rem 10%rem 10%rem;
+}
+
+.social {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin: 2rem auto;
+  left: 25%;
+  width: 50%;
+}
+
+.social a {
+  background: transparent;
+  color: var(--text-color);
+}
+
+.social a:hover {
+  width: 3rem;
+  height: 3rem;
+  border-top: solid var(--main-color) 0.2rem;
+  border-left: solid var(--main-color) 0.1rem;
+  border-radius: 10%;
+  transition: 0.1s;
+}
