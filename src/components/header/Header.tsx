@@ -8,11 +8,11 @@ interface HeaderProps {
 }
 
 const Header = ({ service }: HeaderProps) => {
-  const [navActive, setNavActive] = useState(service.navItems()[0]);
+  const [navActive, setNavActive] = useState("");
 
   return (
     <header className="header">
-      <a className="logo" href="#home">
+      <a className="logo" onClick={() => setNavActive("")} href="#home">
         {service.logo()}
       </a>
 

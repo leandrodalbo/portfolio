@@ -25,8 +25,5 @@ const homeService = new HomeService();
 export default homeService;
 
 const HOME_TEXT = `
-True passions become professions. I am a passionate programmer
-            always designing and architecting solutions that optimize the code
-            and increase its performance keeping it clean.
-
+True passions become professions.
 `;

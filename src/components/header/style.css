@@ -18,6 +18,13 @@
   text-transform: capitalize;
 }
 
+.logo:hover {
+  border-top: solid var(--hover-color) 0.2rem;
+  border-left: solid var(--hover-color) 0.1rem;
+  border-radius: 10%;
+  transition: 0.1s;
+}
+
 .menu-icon {
   font-size: 3rem;
   color: var(--text-color);
@@ -35,8 +42,8 @@
 }
 
 .navbar a:hover {
-  border-top: solid var(--main-color) 0.2rem;
-  border-left: solid var(--main-color) 0.1rem;
+  border-top: solid var(--hover-color) 0.2rem;
+  border-left: solid var(--hover-color) 0.1rem;
   border-radius: 10%;
   transition: 0.1s;
 }

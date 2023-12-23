@@ -1,9 +1,10 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700");
 
 :root {
-  --bg-color: #080b29;
+  --bg-color: #1723a1e4;
   --text-color: #ededed;
   --main-color: #80b4e5e0;
+  --hover-color: #00020be4;
 }
 
 * {
@@ -23,7 +24,11 @@ html {
 }
 
 body {
-  background: var(--bg-color);
+  background: linear-gradient(
+    var(--bg-color),
+    var(--main-color),
+    var(--bg-color)
+  );
   color: var(--text-color);
 }
 
