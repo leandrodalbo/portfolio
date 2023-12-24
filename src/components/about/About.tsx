@@ -12,6 +12,7 @@ const About = ({ service }: AboutProps) => {
   return (
     <section id="about" className="about">
       <h2 className="about-title">{aboutme}</h2>
+
       <div className="about-img">
         <img src={computer} alt="computer-img" />
       </div>

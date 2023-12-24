@@ -19,7 +19,7 @@
 
 .home-content h3 {
   color: transparent;
-  -webkit-text-stroke: 0.7px var(--bg-color);
+  -webkit-text-stroke: 0.7px var(--effect-color);
   font-size: 3rem;
   font-weight: 700;
   line-height: 1.5;

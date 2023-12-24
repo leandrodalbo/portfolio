@@ -5,6 +5,8 @@ import Home from "./components/home/Home";
 import homeService from "./components/home/HomeService";
 import About from "./components/about/About";
 import aboutService from "./components/about/AboutService";
+import Experience from "./components/experience/Experience";
+import experienceService from "./components/experience/ExperienceService";
 
 const Portfolio = () => {
   return (
@@ -12,6 +14,7 @@ const Portfolio = () => {
       <Header service={headerService} />
       <Home service={homeService} />
       <About service={aboutService} />
+      <Experience service={experienceService} />
     </div>
   );
 };
