@@ -1,59 +1,54 @@
-.header {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  padding: 2rem 10%;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  z-index: 100;
-  background: transparent;
-}
-
 .logo {
-  font-size: 2rem;
-  color: var(--text-color);
-  font-weight: 600;
+  font-size: 3rem;
+  border-top: solid var(--effect-color) 0.1rem;
+  border-left: solid var(--effect-color) 0.1rem;
+  border-radius: 10%;
   text-transform: capitalize;
+  color: var(--text-color) !important;
+  padding: 0.5rem;
 }
 
 .logo:hover {
-  border-top: solid var(--hover-color) 0.2rem;
-  border-left: solid var(--hover-color) 0.1rem;
+  font-size: 2rem;
+  background: var(--effect-color);
+  padding: 1rem;
   border-radius: 10%;
-  transition: 0.1s;
+  transition: all 0.5s;
 }
 
-.menu-icon {
-  font-size: 3rem;
-  color: var(--text-color);
-  cursor: pointer;
-  display: none;
-}
-
-.navbar a {
-  font-size: 1.2rem;
-  color: var(--text-color);
+nav a.navlink {
   font-weight: 500;
-  margin-left: 1.5rem;
-  transition: 1s;
-  text-transform: uppercase;
+  letter-spacing: 0.03rem;
+  cursor: pointer;
+  font-size: 2rem;
 }
 
-.navbar a:hover {
-  border-top: solid var(--hover-color) 0.2rem;
-  border-left: solid var(--hover-color) 0.1rem;
-  border-radius: 10%;
-  transition: 0.1s;
+ul.navbar-nav li a {
+  text-transform: uppercase;
+  color: var(--text-color) !important;
+  margin: 1rem;
 }
 
 a.active {
-  border-top: solid var(--text-color) 0.2rem;
-  border-left: solid var(--text-color) 0.1rem;
+  border-bottom: solid var(--effect-color) 0.1rem;
   border-radius: 10%;
 }
 
-a.inactive {
-  text-decoration: none;
+a.inactive:hover {
+  font-size: 0.8rem;
+  background: var(--effect-color);
+  padding: 0.5rem;
+  border-radius: 10%;
+  transition: all 0.5s;
+}
+
+.navbar div button {
+  border: none;
+}
+
+.navbar-toggler:focus,
+.navbar-toggler:active,
+.navbar-toggler-icon:focus {
+  outline: none;
+  box-shadow: none;
 }

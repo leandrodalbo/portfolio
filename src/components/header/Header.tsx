@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { HeaderService } from "./HederService";
-import { FiAlignJustify } from "react-icons/fi";
+import { FaBars } from "react-icons/fa6";
 import "./style.css";
 
 interface HeaderProps {
@@ -8,29 +8,51 @@ interface HeaderProps {
 }
 
 const Header = ({ service }: HeaderProps) => {
-  const [navActive, setNavActive] = useState("");
+  const [navActive, setNavActive] = useState("home");
 
   return (
-    <header className="header">
-      <a className="logo" onClick={() => setNavActive("")} href="#home">
-        {service.logo()}
-      </a>
+    <nav className="navbar navbar-expand-lg navbar-light bg-transparent">
+      <div className="container-fluid">
+        <a
+          className="navbar-brand logo"
+          onClick={() => setNavActive("home")}
+          href="#home"
+        >
+          {service.logo()}
+        </a>
 
-      <FiAlignJustify className="menu-icon" />
+        <button
+          className="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <FaBars color="#ededed" className="navbar-toggler-icon" />
+        </button>
 
-      <nav className="navbar">
-        {service.navItems().map((item) => (
-          <a
-            className={navActive === item ? "active" : "inactive"}
-            key={item}
-            href={`#${item}`}
-            onClick={() => setNavActive(item)}
-          >
-            {item}
-          </a>
-        ))}
-      </nav>
-    </header>
+        <div className="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul className="navbar-nav ms-auto">
+            {service.navItems().map((item) => (
+              <li key={item} className="nav-item">
+                <a
+                  className={`nav-link ${
+                    navActive === item ? "active" : "inactive"
+                  }`}
+                  key={item}
+                  href={`#${item}`}
+                  onClick={() => setNavActive(item)}
+                >
+                  {item}
+                </a>
+              </li>
+            ))}
+          </ul>
+        </div>
+      </div>
+    </nav>
   );
 };
 
