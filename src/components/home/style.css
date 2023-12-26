@@ -1,26 +1,11 @@
-section.home {
-  position: relative;
-  margin: 10%;
-}
-
-.home-content {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  margin: 10%;
-  padding: 15%;
-}
-
-.home-content h1 {
-  font-size: 3rem;
+#home h1 {
+  font-size: 2rem;
   font-weight: 400;
   color: var(--text-color);
   text-transform: capitalize;
 }
 
-.home-typed {
+#home .home-typed {
   color: transparent;
   -webkit-text-stroke: 0.7px var(--effect-color);
   font-size: 3rem;
@@ -29,18 +14,18 @@ section.home {
   text-transform: capitalize;
 }
 
-.home-content .social {
+#home .social {
   display: flex;
   justify-content: center;
   gap: 1rem;
 }
 
-.home-content .social a {
+#home .social a {
   background: transparent;
   color: var(--text-color);
 }
 
-.home-content .social a:hover {
+#home .social a:hover {
   border-top: solid var(--hover-color) 0.2rem;
   border-left: solid var(--hover-color) 0.1rem;
   border-radius: 10%;

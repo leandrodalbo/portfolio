@@ -14,7 +14,6 @@ const Portfolio = () => {
       <Header service={headerService} />
       <Home service={homeService} />
       <About service={aboutService} />
-      <Experience service={experienceService} />
     </div>
   );
 };

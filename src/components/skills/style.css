@@ -1,3 +1,19 @@
+.experience {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.experience .exp-row {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-direction: column;
+  min-height: auto;
+  gap: 1rem;
+}
+
 .experience h2 {
   font-size: 3rem;
   margin: 0.5rem 0.5rem 0.5rem 0.5rem;
