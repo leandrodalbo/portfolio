@@ -4,9 +4,7 @@ import { FaXTwitter } from "react-icons/fa6";
 export class HomeService {
   public content() {
     return {
-      hometext: HOME_TEXT,
-      hi: " Hi, I'm ",
-      myname: "Leandro Dal Bo",
+      hi: "Hi, I'm Leandro Dal Bo",
       profession: "Software Developer",
     };
   }
@@ -23,7 +21,3 @@ export class HomeService {
 const homeService = new HomeService();
 
 export default homeService;
-
-const HOME_TEXT = `
-True passions become professions.
-`;

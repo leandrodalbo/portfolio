@@ -11,7 +11,7 @@ const Header = ({ service }: HeaderProps) => {
   const [navActive, setNavActive] = useState("home");
 
   return (
-    <nav className="navbar navbar-expand-lg navbar-light bg-transparent">
+    <nav className="navbar navbar-expand-lg fixed-top navbar-light bg-transparent">
       <div className="container-fluid">
         <a
           className="navbar-brand logo"

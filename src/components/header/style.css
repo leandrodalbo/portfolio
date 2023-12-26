@@ -1,45 +1,38 @@
-.logo {
-  font-size: 3rem;
-  border-top: solid var(--effect-color) 0.1rem;
-  border-left: solid var(--effect-color) 0.1rem;
-  border-radius: 10%;
+.navbar .logo {
+  font-weight: 500;
+  font-size: 2rem;
+  border-bottom: solid var(--effect-color) 0.1rem;
   text-transform: capitalize;
   color: var(--text-color) !important;
   padding: 0.5rem;
 }
 
-.logo:hover {
-  font-size: 2rem;
-  background: var(--effect-color);
-  padding: 1rem;
-  border-radius: 10%;
+.navbar .logo:hover {
+  color: var(--hover-color) !important;
   transition: all 0.5s;
 }
 
-nav a.navlink {
+.navbar a.active {
+  border-bottom: solid var(--effect-color) 0.1rem;
+}
+
+.navbar a.inactive:hover {
+  color: var(--hover-color) !important;
+  transition: all 0.5s;
+}
+
+.navbar a.navlink {
   font-weight: 500;
   letter-spacing: 0.03rem;
   cursor: pointer;
-  font-size: 2rem;
+  font-size: 3rem;
+  padding: 0.5rem;
 }
 
-ul.navbar-nav li a {
+.navbar ul.navbar-nav li a {
   text-transform: uppercase;
   color: var(--text-color) !important;
   margin: 1rem;
-}
-
-a.active {
-  border-bottom: solid var(--effect-color) 0.1rem;
-  border-radius: 10%;
-}
-
-a.inactive:hover {
-  font-size: 0.8rem;
-  background: var(--effect-color);
-  padding: 0.5rem;
-  border-radius: 10%;
-  transition: all 0.5s;
 }
 
 .navbar div button {

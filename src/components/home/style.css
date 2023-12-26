@@ -1,55 +1,48 @@
-.home {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 0 1%;
+section.home {
+  position: relative;
+  margin: 10%;
 }
 
 .home-content {
-  margin: 10% 5% 5% 5%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   text-align: center;
+  margin: 10%;
+  padding: 15%;
 }
 
 .home-content h1 {
-  font-size: 4rem;
-  font-weight: 700;
-  line-height: 1.5;
-  margin: 5% 0% 0% 0%;
+  font-size: 3rem;
+  font-weight: 400;
+  color: var(--text-color);
+  text-transform: capitalize;
 }
 
-.home-content h3 {
+.home-typed {
   color: transparent;
   -webkit-text-stroke: 0.7px var(--effect-color);
   font-size: 3rem;
   font-weight: 700;
   line-height: 1.5;
+  text-transform: capitalize;
 }
 
-.home-content p {
-  font-size: 1.5rem;
-  margin: 10%rem 10%rem 10%rem 10%rem;
-  padding: 10%rem 10%rem 10%rem 10%rem;
-}
-
-.social {
+.home-content .social {
   display: flex;
   justify-content: center;
   gap: 1rem;
-  margin: 2rem auto;
-  left: 25%;
-  width: 50%;
 }
 
-.social a {
+.home-content .social a {
   background: transparent;
   color: var(--text-color);
 }
 
-.social a:hover {
-  width: 3rem;
-  height: 3rem;
+.home-content .social a:hover {
   border-top: solid var(--hover-color) 0.2rem;
   border-left: solid var(--hover-color) 0.1rem;
   border-radius: 10%;
-  transition: 0.1s;
+  transition: 0.5s;
 }
