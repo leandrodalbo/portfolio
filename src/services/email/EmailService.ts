@@ -31,7 +31,17 @@ export class EmailService {
       },
     };
 
-    await axios.post(endpoint, data);
+    try {
+      const resp = await axios.post(endpoint, data);
+
+      if (resp.status >= 200 && resp.status <= 300) {
+        return "Message Successfully Sent";
+      }
+    } catch (e) {
+      return `Message Failed, ${e}`;
+    }
+
+    return "Message Failed";
   }
 
   public getMailParams(): EmailServiceParams {

@@ -36,3 +36,26 @@
   color: var(--hover-color) !important;
   transition: all 0.5s;
 }
+
+#contact .toast-position {
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+#contact .toast-polite-area {
+  position: relative;
+}
+
+#contact .toast {
+  width: 30rem;
+  height: 3rem;
+  background: var(--main-color);
+}
+
+#contact .toast button {
+  width: 100%;
+  height: 100%;
+  color: var(--text-color);
+  background: var(--effect-color);
+}

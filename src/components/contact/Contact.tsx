@@ -1,4 +1,4 @@
-import React, { FormEvent, useState } from "react";
+import React, { useState } from "react";
 import "./style.css";
 import { EmailService } from "../../services/email/EmailService";
 import { Form } from "react-bootstrap";
@@ -13,22 +13,64 @@ const Contact = ({ service }: EmailProps) => {
   const [email, setEmail] = useState("");
   const [message, setMessage] = useState("");
 
-  const sendEmail = async () => {
-    await service.sendEmail({ subject, name, email, message });
+  const [isToastDisplayed, setIsToastDisplayed] = useState(false);
+  const [toastMessage, setToastMessage] = useState("");
 
+  const cleanUp = () => {
     setName("");
     setMessage("");
     setSubject("");
     setEmail("");
   };
 
+  const showToast = (result: string) => {
+    setToastMessage(result);
+    setIsToastDisplayed(true);
+  };
+
+  const closeToast = () => {
+    setToastMessage("");
+    setIsToastDisplayed(false);
+  };
+
+  const sendEmail = async () => {
+    const result = await service.sendEmail({
+      subject,
+      name,
+      email,
+      message,
+    });
+
+    showToast(result);
+    cleanUp();
+  };
+
   return (
     <section id="contact" className="py-5">
       <div className="container py-5">
         <div className="row py-5 ">
+          {isToastDisplayed && (
+            <div
+              aria-live="polite"
+              aria-atomic="true"
+              className="toast-polite-area"
+            >
+              <div className="toast-position">
+                <div
+                  className="toast show"
+                  role="alert"
+                  aria-live="assertive"
+                  aria-atomic="true"
+                >
+                  <button onClick={() => closeToast()}>{toastMessage}</button>
+                </div>
+              </div>
+            </div>
+          )}
           <div className="col py-5">
             <h1 className="d-flex justify-content-center">Message-Me</h1>
-            <Form className="email-form">
+
+            <Form onSubmit={sendEmail} className="email-form">
               <Form.Group className="form-group">
                 <Form.Label htmlFor="inputName">Name</Form.Label>
                 <Form.Control
@@ -88,11 +130,7 @@ const Contact = ({ service }: EmailProps) => {
                 ></Form.Control>
               </Form.Group>
 
-              <button
-                onClick={() => sendEmail()}
-                type="submit"
-                className="email-btn"
-              >
+              <button type="submit" className="email-btn">
                 Submit
               </button>
             </Form>
