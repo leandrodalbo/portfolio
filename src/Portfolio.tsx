@@ -7,6 +7,8 @@ import About from "./components/about/About";
 import aboutService from "./components/about/AboutService";
 import Skills from "./components/skills/Skills";
 import skillsService from "./components/skills/SkillsService";
+import emailService from "./services/email/EmailService";
+import Contact from "./components/contact/Contact";
 
 const Portfolio = () => {
   return (
@@ -15,6 +17,7 @@ const Portfolio = () => {
       <Home service={homeService} />
       <About service={aboutService} />
       <Skills service={skillsService} />
+      <Contact service={emailService} />
     </div>
   );
 };

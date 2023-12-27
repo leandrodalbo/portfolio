@@ -1,0 +1,38 @@
+#contact {
+  margin-top: 25rem;
+}
+
+#contact h1 {
+  font-size: 3rem;
+  font-weight: 500;
+  color: var(--text-color);
+  text-transform: capitalize;
+}
+
+#contact .email-form div {
+  padding: 0.5rem;
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+
+#contact .email-form div label {
+  font-size: 1.2rem;
+  letter-spacing: 0.1rem;
+  text-transform: capitalize;
+  font-weight: 300;
+  color: var(--text-color);
+}
+
+#contact .email-btn {
+  width: 100%;
+  height: 3rem;
+  font-size: 1.2rem;
+  letter-spacing: 0.1rem;
+  color: var(--text-color);
+  background: var(--main-color);
+}
+
+#contact .email-btn:hover {
+  color: var(--hover-color) !important;
+  transition: all 0.5s;
+}
