@@ -1,0 +1,10 @@
+#footer {
+  margin-top: 10rem;
+}
+
+#footer p {
+  font-size: 2rem;
+  font-weight: 400;
+  color: var(--text-color);
+  text-transform: capitalize;
+}

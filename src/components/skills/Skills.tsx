@@ -24,9 +24,9 @@ const Skills = ({ service }: SkillsProps) => {
           {items.map((item) => (
             <div
               key={item.title}
-              className="col-sm-6 col-md-3 col-lg-3 py-5 col d-flex justify-content-center"
+              className="col-sm-6 col-md-3 col-lg-3 col d-flex justify-content-center"
             >
-              <div className="card">
+              <div className="card my-3 px-1">
                 <div className="card-header">
                   {<item.icon />}
                   <span className="card-title">{item.title} </span>

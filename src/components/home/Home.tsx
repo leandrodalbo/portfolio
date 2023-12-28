@@ -15,17 +15,17 @@ const Home = ({ service }: HomeProps) => {
       <div className="container py-5">
         <div className="row py-5 ">
           <div className="col py-5">
-            <h1 className="d-flex justify-content-center">{hi}</h1>
+            <h1 className="d-flex justify-content-center py-2">{hi}</h1>
 
             <Typed
-              className="home-typed d-flex justify-content-center"
+              className="home-typed my-2 d-flex justify-content-center"
               strings={[profession]}
               typeSpeed={70}
               backSpeed={90}
               loop={true}
             />
 
-            <div className="social">
+            <div className="social my-2">
               {service.socialLinks().map((item) => (
                 <a key={item.href} href={item.href}>
                   {<item.icon size={30} />}

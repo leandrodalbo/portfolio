@@ -9,12 +9,6 @@
   text-transform: capitalize;
 }
 
-#skills .card {
-  background: var(--main-color);
-  width: 15rem;
-  height: 5rem;
-}
-
 #skills .card-title {
   font-size: 1rem;
   font-weight: 400;
@@ -25,4 +19,22 @@
 
 #skills .progress-bar {
   background-color: var(--effect-color) !important;
+}
+
+#skills .card {
+  background: var(--main-color);
+  width: 15rem;
+  height: 6rem;
+  border-radius: 1rem;
+  box-shadow: 0 6px 10px var(--main-color), 0 0 2rem var(--effect-color);
+  transition: 0.3s transform cubic-bezier(0.155, 1.105, 0.295, 1.12),
+    0.3s box-shadow,
+    0.3s -webkit-transform cubic-bezier(0.155, 1.105, 0.295, 1.12);
+
+  cursor: pointer;
+}
+
+#skills .card:hover {
+  transform: scale(1.5);
+  box-shadow: 0 3rem 8rem var(--effect-color), 0 2rem 4rem var(--text-color);
 }

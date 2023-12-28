@@ -7,7 +7,7 @@ interface AboutProps {
 }
 
 const About = ({ service }: AboutProps) => {
-  const { aboutme, computer, text } = service.content();
+  const { aboutme, computer, text, cv, cvbtn } = service.content();
 
   return (
     <section id="about" className="py-5">
@@ -27,8 +27,9 @@ const About = ({ service }: AboutProps) => {
             </div>
           </div>
           <div className="mx-auto col-sm-12 col-md-4 col-lg-4 py-5 col d-flex justify-content-center">
-            <div className="about-text py-5 text-center">
+            <div className="about-info text-center">
               <p>{text}</p>
+              <a href={cv}>{cvbtn}</a>
             </div>
           </div>
         </div>

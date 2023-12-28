@@ -1,4 +1,5 @@
 import computer from "../../assets/computer.png";
+import cv from "../../assets/cv.pdf";
 
 export class AboutService {
   public content() {
@@ -6,6 +7,8 @@ export class AboutService {
       aboutme: "About-Me",
       computer: computer,
       text: ABOUT_TEXT,
+      cv: cv,
+      cvbtn: "Download-CV",
     };
   }
 }
