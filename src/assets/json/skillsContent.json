@@ -1,0 +1,11 @@
+{
+  "title": "My-Skills",
+  "java": { "title": "Java", "fill": 100 },
+  "kotlin": { "title": "Kotlin", "fill": 95 },
+  "typescript": { "title": "Typescript", "fill": 90 },
+  "spring": { "title": "Spring Framework", "fill": 98 },
+  "docker": { "title": "Docker", "fill": 78 },
+  "aws": { "title": "AWS", "fill": 70 },
+  "react": { "title": "React", "fill": 70 },
+  "testing": { "title": "Automated Tests", "fill": 100 }
+}

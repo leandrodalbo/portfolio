@@ -1,16 +1,16 @@
 import React from "react";
 import "./style.css";
-import { AboutService } from "./AboutService";
+import ContentService from "../../services/content/ContentService";
 
 interface AboutProps {
-  service: AboutService;
+  service: ContentService;
 }
 
 const About = ({ service }: AboutProps) => {
   const { aboutme, computer, text, cv, cvbtn } = service.content();
 
   return (
-    <section id="about" className="py-5">
+    <section data-testid="about" id="about" className="py-5">
       <div className="container py-3">
         <div className="row py-3 ">
           <div className="col py-3">

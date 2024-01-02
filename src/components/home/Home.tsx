@@ -1,17 +1,18 @@
 import React from "react";
 import "./style.css";
-import { HomeService } from "./HomeService";
 import Typed from "react-typed";
+import ContentService from "../../services/content/ContentService";
+import { SocialItem } from "../../services/content/home/HomeService";
 
 interface HomeProps {
-  service: HomeService;
+  service: ContentService;
 }
 
 const Home = ({ service }: HomeProps) => {
-  const { hi, profession } = service.content();
+  const { hi, profession, socialLinks } = service.content();
 
   return (
-    <section id="home" className="py-5">
+    <section data-testid="home" id="home" className="py-5">
       <div className="container py-5">
         <div className="row py-5 ">
           <div className="col py-5">
@@ -26,7 +27,7 @@ const Home = ({ service }: HomeProps) => {
             />
 
             <div className="social my-2">
-              {service.socialLinks().map((item) => (
+              {socialLinks.map((item: SocialItem) => (
                 <a key={item.href} href={item.href}>
                   {<item.icon size={30} />}
                 </a>

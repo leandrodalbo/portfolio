@@ -1,24 +1,28 @@
 import React, { useState } from "react";
-import { HeaderService } from "./HederService";
 import { FaBars } from "react-icons/fa6";
 import "./style.css";
+import ContentService from "../../services/content/ContentService";
 
 interface HeaderProps {
-  service: HeaderService;
+  service: ContentService;
 }
 
 const Header = ({ service }: HeaderProps) => {
   const [navActive, setNavActive] = useState("home");
+  const { navitems, logo } = service.content();
 
   return (
-    <nav className="navbar navbar-expand-lg fixed-top bg-transparent">
+    <nav
+      data-testid="header"
+      className="navbar navbar-expand-lg fixed-top bg-transparent"
+    >
       <div className="container-fluid">
         <a
           className="navbar-brand logo"
           onClick={() => setNavActive("home")}
           href="#home"
         >
-          {service.logo()}
+          {logo}
         </a>
 
         <button
@@ -35,7 +39,7 @@ const Header = ({ service }: HeaderProps) => {
 
         <div className="collapse navbar-collapse" id="navbarSupportedContent">
           <ul className="navbar-nav ms-auto">
-            {service.navItems().map((item) => (
+            {navitems.map((item: string) => (
               <li key={item} className="nav-item">
                 <a
                   className={`nav-link ${

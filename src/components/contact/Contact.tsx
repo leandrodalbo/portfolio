@@ -46,7 +46,7 @@ const Contact = ({ service }: EmailProps) => {
   };
 
   return (
-    <section id="contact" className="py-5">
+    <section data-testid="contact" id="contact" className="py-5">
       <div className="container py-5">
         <div className="row py-5 ">
           {isToastDisplayed && (

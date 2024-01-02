@@ -1,14 +1,14 @@
 import React from "react";
 import "./style.css";
-import { FooterService } from "./FooterService";
+import ContentService from "../../services/content/ContentService";
 
 interface FooterProps {
-  service: FooterService;
+  service: ContentService;
 }
 
 const Footer = ({ service }: FooterProps) => {
   return (
-    <footer id="footer" className="py-1">
+    <footer data-testid="footer" id="footer" className="py-1">
       <div className="container py-1">
         <div className="row py-1 ">
           <div className="col py-1">

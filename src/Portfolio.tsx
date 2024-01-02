@@ -1,20 +1,20 @@
 import React from "react";
 import Header from "./components/header/Header";
-import headerService from "./components/header/HederService";
 import Home from "./components/home/Home";
-import homeService from "./components/home/HomeService";
 import About from "./components/about/About";
-import aboutService from "./components/about/AboutService";
 import Skills from "./components/skills/Skills";
-import skillsService from "./components/skills/SkillsService";
 import emailService from "./services/email/EmailService";
 import Contact from "./components/contact/Contact";
 import Footer from "./components/footer/Footer";
-import footerService from "./components/footer/FooterService";
+import aboutService from "./services/content/about/AboutService";
+import footerService from "./services/content/footer/FooterService";
+import headerService from "./services/content/header/HeaderService";
+import homeService from "./services/content/home/HomeService";
+import skillsService from "./services/content/skills/SkillsService";
 
 const Portfolio = () => {
   return (
-    <div data-testId="portfolio">
+    <div>
       <Header service={headerService} />
       <Home service={homeService} />
       <About service={aboutService} />

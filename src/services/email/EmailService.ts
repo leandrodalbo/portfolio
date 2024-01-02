@@ -1,5 +1,5 @@
 import axios from "axios";
-import emailParams from "../../assets/emailParams.json";
+import emailParams from "../../assets/json/emailParams.json";
 
 interface EmailServiceParams {
   serviceId: string;

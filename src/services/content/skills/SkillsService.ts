@@ -1,58 +1,69 @@
 import { FaJava, FaDocker, FaReact, FaCheckDouble } from "react-icons/fa";
 import { FaAws } from "react-icons/fa6";
 import { SiKotlin, SiSpring, SiTypescript } from "react-icons/si";
+import jsoncontent from "../../../assets/json/skillsContent.json";
 
-export class SkillsService {
+export interface SkillItem {
+  title: string;
+  fill: number;
+  icon: any;
+}
+
+class SkillsService {
   public content() {
+    const {
+      title,
+      java,
+      kotlin,
+      aws,
+      typescript,
+      docker,
+      testing,
+      spring,
+      react,
+    } = jsoncontent;
+
     return {
-      title: "My Skills",
+      title: title,
       items: [
         {
           icon: FaJava,
-          title: "Java",
-          fill: 100,
+          ...java,
         },
 
         {
           icon: SiKotlin,
-          title: "Kotlin",
-          fill: 95,
+          ...kotlin,
         },
 
         {
           icon: SiTypescript,
-          title: "Typescript",
-          fill: 80,
+          ...typescript,
         },
 
         {
           icon: SiSpring,
-          title: "Spring Framework",
-          fill: 80,
+          ...spring,
         },
 
         {
           icon: FaDocker,
-          title: "Docker",
-          fill: 75,
+          ...docker,
         },
 
         {
           icon: FaAws,
-          title: "AWS",
-          fill: 60,
+          ...aws,
         },
 
         {
           icon: FaReact,
-          title: "React",
-          fill: 60,
+          ...react,
         },
 
         {
           icon: FaCheckDouble,
-          title: "Automated Tests",
-          fill: 100,
+          ...testing,
         },
       ],
     };

@@ -1,17 +1,18 @@
 import React from "react";
 import "./style.css";
-import { SkillsService } from "./SkillsService";
 import { ProgressBar } from "react-bootstrap";
+import ContentService from "../../services/content/ContentService";
+import { SkillItem } from "../../services/content/skills/SkillsService";
 
 interface SkillsProps {
-  service: SkillsService;
+  service: ContentService;
 }
 
 const Skills = ({ service }: SkillsProps) => {
   const { title, items } = service.content();
 
   return (
-    <section id="skills" className="py-5">
+    <section data-testid="skills" id="skills" className="py-5">
       <div className="container py-5">
         <div className="row py-5 ">
           <div className="col py-5">
@@ -21,7 +22,7 @@ const Skills = ({ service }: SkillsProps) => {
           </div>
         </div>
         <div className="row py-5">
-          {items.map((item) => (
+          {items.map((item: SkillItem) => (
             <div
               key={item.title}
               className="col-sm-6 col-md-3 col-lg-3 col d-flex justify-content-center"
