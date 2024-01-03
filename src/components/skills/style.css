@@ -9,12 +9,27 @@
   text-transform: capitalize;
 }
 
-#skills .card-title {
-  font-size: 1rem;
-  font-weight: 400;
+#skills .c-item-head {
+  font-size: 2rem;
+  font-weight: 500;
   color: var(--text-color);
   text-transform: capitalize;
-  margin-left: 1rem;
+  width: 80%;
+  margin-bottom: 2rem;
+  margin-left: 10%;
+  margin-right: 10%;
+  background: transparent;
+}
+
+#skills .c-item-head span {
+  margin-left: 2rem;
+}
+
+#skills .c-item-body {
+  width: 80%;
+  margin-left: 10%;
+  margin-right: 10%;
+  background: transparent;
 }
 
 #skills .progress-bar {
@@ -23,18 +38,11 @@
 
 #skills .card {
   background: var(--main-color);
-  width: 15rem;
-  height: 6rem;
   border-radius: 1rem;
-  box-shadow: 0 6px 10px var(--main-color), 0 0 2rem var(--effect-color);
+  margin: 2rem;
+  padding: 2rem;
+  box-shadow: 0 0.1rem 0.1rem var(--effect-color), 0 0 0.1rem var(--text-color);
   transition: 0.3s transform cubic-bezier(0.155, 1.105, 0.295, 1.12),
     0.3s box-shadow,
     0.3s -webkit-transform cubic-bezier(0.155, 1.105, 0.295, 1.12);
-
-  cursor: pointer;
-}
-
-#skills .card:hover {
-  transform: scale(1.5);
-  box-shadow: 0 3rem 8rem var(--effect-color), 0 2rem 4rem var(--text-color);
 }
