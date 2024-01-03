@@ -1,9 +1,8 @@
-import React, { useState } from "react";
+import React from "react";
 import "./style.css";
 import { Carousel, ProgressBar } from "react-bootstrap";
 import ContentService from "../../services/content/ContentService";
 import { SkillItem } from "../../services/content/skills/SkillsService";
-import curlybrc from "../../assets/curly.jpg";
 
 interface SkillsProps {
   service: ContentService;
