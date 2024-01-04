@@ -12,13 +12,12 @@
 #skills .c-item-head {
   font-size: 2rem;
   font-weight: 500;
-  color: var(--text-color);
+  color: var(--effect-color);
   text-transform: capitalize;
   width: 80%;
   margin-bottom: 2rem;
   margin-left: 10%;
   margin-right: 10%;
-  background: transparent;
 }
 
 #skills .c-item-head span {
@@ -37,7 +36,7 @@
 }
 
 #skills .card {
-  background: var(--main-color);
+  background: var(--bg-color) !important;
   border-radius: 1rem;
   margin: 2rem;
   padding: 2rem;

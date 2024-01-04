@@ -56,8 +56,8 @@
 }
 
 #about .about-info a:hover {
-  border-top: solid var(--hover-color) 0.2rem;
-  border-left: solid var(--hover-color) 0.1rem;
+  border: solid var(--main-color) 0.2rem;
   transition: 0.2s;
-  background: var(--main-color);
+  color: var(--text-color);
+  background: var(--hover-color);
 }

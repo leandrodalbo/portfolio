@@ -29,11 +29,12 @@
   font-size: 1.2rem;
   letter-spacing: 0.1rem;
   color: var(--text-color);
-  background: var(--main-color);
+  background: var(--effect-color);
 }
 
 #contact .email-btn:hover {
-  color: var(--hover-color) !important;
+  color: var(--text-color) !important;
+  background: var(--hover-color);
   transition: all 0.5s;
 }
 

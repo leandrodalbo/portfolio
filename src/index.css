@@ -2,10 +2,10 @@
 
 :root {
   --bg-color: #38419d;
-  --effect-color: #392467;
+  --effect-color: #200e3a;
   --text-color: #ededed;
   --main-color: #3887be;
-  --hover-color: #200e3a;
+  --hover-color: #392467;
 }
 
 * {

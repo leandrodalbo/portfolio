@@ -77,7 +77,7 @@ const Contact = ({ service }: EmailProps) => {
                   type="text"
                   className="form-control"
                   id="inputName"
-                  placeholder="Enter Name"
+                  placeholder="Name"
                   required={true}
                   value={name}
                   onChange={(e) => setName(e.target.value)}
@@ -89,7 +89,7 @@ const Contact = ({ service }: EmailProps) => {
                   type="email"
                   className="form-control"
                   id="inputEmail"
-                  placeholder="Enter email"
+                  placeholder="Email"
                   required={true}
                   value={email}
                   onChange={(e) => {
@@ -104,7 +104,7 @@ const Contact = ({ service }: EmailProps) => {
                   type="text"
                   className="form-control"
                   id="inputSubject"
-                  placeholder="Enter Subject"
+                  placeholder="Subject"
                   required={true}
                   value={subject}
                   onChange={(e) => {
@@ -121,6 +121,7 @@ const Contact = ({ service }: EmailProps) => {
                   className="form-control"
                   id="messageArea"
                   as="textarea"
+                  placeholder="Message"
                   rows={5}
                   value={message}
                   required={true}
@@ -131,7 +132,7 @@ const Contact = ({ service }: EmailProps) => {
               </Form.Group>
 
               <button type="submit" className="email-btn">
-                Submit
+                Send Message
               </button>
             </Form>
           </div>
