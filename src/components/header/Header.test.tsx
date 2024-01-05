@@ -1,24 +1,42 @@
 import { fireEvent, render, screen } from "@testing-library/react";
 import Header from "./Header";
-import headerService from "../../services/content/header/HeaderService";
+import ContentService from "../../services/content/ContentService";
+
+jest.mock("../../services/content/ContentService");
+
+const mockService = jest.mocked<ContentService>({ content: jest.fn() }, true);
 
 describe("HeaderTest", () => {
   test("should render the logo a navigation items", () => {
-    const { logo, navitems } = headerService.content();
-    render(<Header service={headerService} />);
+    mockService.content.mockImplementation(() => {
+      return { logo: "logo", navitems: ["a", "b", "c"] };
+    });
 
-    expect(screen.getByText(logo)).toBeInTheDocument();
+    const spy = jest.spyOn(mockService, "content");
 
-    navitems.forEach((item) => {
+    render(<Header service={mockService} />);
+
+    expect(screen.getByText("logo")).toBeInTheDocument();
+
+    ["a", "b", "c"].forEach((item) => {
       expect(screen.getByText(item)).toBeInTheDocument();
     });
+
+    expect(spy).toHaveBeenCalledTimes(1);
   });
 
   test("should show the selected section", () => {
-    const { navitems } = headerService.content();
-    render(<Header service={headerService} />);
+    mockService.content.mockImplementation(() => {
+      return { logo: "logo", navitems: ["a", "b", "c"] };
+    });
 
-    navitems.forEach((item) => {
+    const spy = jest.spyOn(mockService, "content");
+
+    render(<Header service={mockService} />);
+
+    expect(spy).toHaveBeenCalledTimes(1);
+
+    ["a", "b", "c"].forEach((item) => {
       fireEvent.click(screen.getByText(item));
       expect(screen.getByText(item)).toHaveClass("active");
     });
