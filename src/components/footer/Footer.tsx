@@ -13,7 +13,8 @@ const Footer = ({ service }: FooterProps) => {
         <div className="row py-1 ">
           <div className="col py-1">
             <p className="d-flex justify-content-center py-2">
-              &copy;{service.content()}
+              <span>&copy;</span>
+              {service.content()}
             </p>
           </div>
         </div>
