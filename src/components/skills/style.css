@@ -3,8 +3,9 @@
 }
 
 #skills .skills-title {
-  font-size: 3rem;
-  font-weight: 500;
+  font-size: 4rem;
+  font-weight: 700;
+  letter-spacing: 0.5rem;
   color: var(--text-color);
   text-transform: capitalize;
 }
@@ -12,7 +13,7 @@
 #skills .c-item-head {
   font-size: 2rem;
   font-weight: 500;
-  color: var(--effect-color);
+  color: var(--text-color);
   text-transform: capitalize;
   width: 80%;
   margin-bottom: 2rem;
@@ -32,7 +33,7 @@
 }
 
 #skills .progress-bar {
-  background-color: var(--effect-color) !important;
+  background-color: var(--main-color) !important;
 }
 
 #skills .card {

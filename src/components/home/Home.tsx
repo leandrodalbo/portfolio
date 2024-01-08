@@ -29,7 +29,7 @@ const Home = ({ service }: HomeProps) => {
             <div className="social my-2">
               {socialLinks.map((item: SocialItem) => (
                 <a key={item.href} href={item.href}>
-                  {<item.icon size={30} />}
+                  {<item.icon size={40} />}
                 </a>
               ))}
             </div>

@@ -1,11 +1,12 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700");
 
 :root {
-  --bg-color: #5c8374;
-  --effect-color: #092635;
+  --bg-color: #02023c;
+  --second-bg-color: #1a1a3f;
+  --effect-color: #f98f04e8;
   --text-color: #ededed;
-  --hover-color: #1b4242;
-  --main-color: #5c8374;
+  --hover-color: #f87706;
+  --main-color: #055689;
 }
 
 * {
@@ -25,7 +26,7 @@ html {
 body {
   background: linear-gradient(
     var(--bg-color),
-    var(--main-color),
+    var(--second-bg-color),
     var(--bg-color)
   );
   color: var(--text-color);

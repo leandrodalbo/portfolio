@@ -131,7 +131,7 @@ const Contact = ({ service }: EmailProps) => {
                 ></Form.Control>
               </Form.Group>
 
-              <button type="submit" className="email-btn">
+              <button type="submit" className="email-btn btn">
                 Send Message
               </button>
             </Form>

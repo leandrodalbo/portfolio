@@ -4,7 +4,7 @@
 
 #home h1 {
   margin-top: 5rem;
-  font-size: 2rem;
+  font-size: 4rem;
   font-weight: 400;
   color: var(--text-color);
   text-transform: capitalize;
@@ -14,7 +14,7 @@
   margin-top: 5rem;
   color: transparent;
   -webkit-text-stroke: 0.7px var(--effect-color);
-  font-size: 3rem;
+  font-size: 4rem;
   font-weight: 700;
   line-height: 1.5;
   text-transform: capitalize;
@@ -24,7 +24,7 @@
   margin-top: 5rem;
   display: flex;
   justify-content: center;
-  gap: 1rem;
+  gap: 2rem;
 }
 
 #home .social a {

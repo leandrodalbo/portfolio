@@ -29,7 +29,9 @@ const About = ({ service }: AboutProps) => {
           <div className="mx-auto col-sm-12 col-md-4 col-lg-4 py-5 col d-flex justify-content-center">
             <div className="about-info text-center">
               <p>{text}</p>
-              <a href={cv}>{cvbtn}</a>
+              <a className="btn" href={cv}>
+                {cvbtn}
+              </a>
             </div>
           </div>
         </div>

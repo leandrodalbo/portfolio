@@ -3,8 +3,9 @@
 }
 
 #contact h1 {
-  font-size: 3rem;
-  font-weight: 500;
+  font-size: 4rem;
+  font-weight: 700;
+  letter-spacing: 0.5rem;
   color: var(--text-color);
   text-transform: capitalize;
 }
@@ -29,7 +30,10 @@
   font-size: 1.2rem;
   letter-spacing: 0.1rem;
   color: var(--text-color);
-  background: var(--effect-color);
+  background: var(--main-color);
+  width: 99%;
+  margin-left: 0.5%;
+  margin-right: 0.5%;
 }
 
 #contact .email-btn:hover {
