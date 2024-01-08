@@ -12,7 +12,6 @@
 #about .about-image {
   width: 30rem;
   height: 30rem;
-  border-radius: 25%;
   margin-bottom: 2rem;
 }
 
@@ -20,7 +19,7 @@
   position: relative;
   width: 30rem;
   height: 30rem;
-  border-radius: 2%;
+  border-radius: 50%;
   border: 0.2rem solid var(--text-color);
 }
 
@@ -36,8 +35,8 @@
   height: 15rem;
   text-align: center;
   line-height: 2rem;
-  letter-spacing: 0.1rem;
-  font-size: 1.8rem;
+  letter-spacing: 0.2rem;
+  font-size: 2rem;
   color: var(--text-color);
 }
 

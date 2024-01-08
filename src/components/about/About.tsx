@@ -7,7 +7,7 @@ interface AboutProps {
 }
 
 const About = ({ service }: AboutProps) => {
-  const { aboutme, computer, text, cv, cvbtn } = service.content();
+  const { aboutme, profile, text, cv, cvbtn } = service.content();
 
   return (
     <section data-testid="about" id="about" className="py-5">
@@ -23,7 +23,7 @@ const About = ({ service }: AboutProps) => {
         <div className="row py-3 no-gutters">
           <div className="col-sm-12 col-md-4 col-lg-4 py-3 col d-flex justify-content-center">
             <div className="about-image center">
-              <img src={computer} alt="computer-img" />
+              <img src={profile} alt="computer-img" />
             </div>
           </div>
           <div className="mx-auto col-sm-12 col-md-4 col-lg-4 py-5 col d-flex justify-content-center">

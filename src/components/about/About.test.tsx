@@ -1,6 +1,7 @@
 import { render, screen } from "@testing-library/react";
 import ContentService from "../../services/content/ContentService";
 import About from "./About";
+import { profile } from "console";
 
 jest.mock("../../services/content/ContentService");
 
@@ -13,7 +14,7 @@ describe("AboutTest", () => {
         aboutme: "aboutme",
         cvbtn: "btncontent",
         text: "some text",
-        computer: "/img",
+        profile: "/img",
         cv: "#/cv",
       };
     });

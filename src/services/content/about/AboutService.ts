@@ -1,4 +1,4 @@
-import computer from "../../../assets/images/computer.png";
+import profile from "../../../assets/images/profile.jpeg";
 import cv from "../../../assets/pdf/cv.pdf";
 
 import ContentService from "../ContentService";
@@ -10,7 +10,7 @@ class AboutService implements ContentService {
 
     return {
       aboutme: aboutme,
-      computer: computer,
+      profile: profile,
       text: text,
       cv: cv,
       cvbtn: cvbtn,
