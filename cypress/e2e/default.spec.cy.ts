@@ -6,7 +6,7 @@ describe("portfolio", () => {
       const links = [
         "https://www.linkedin.com/in/leandrodalbo",
         "https://github.com/leandrodalbo",
-        "https://twitter.com/cleandeveloper",
+        "https://twitter.com/leadevt_dal",
       ];
       expect(links).includes(req.url);
     });
@@ -57,7 +57,7 @@ describe("portfolio", () => {
   it("can visit X from home section", () => {
     cy.visit("http://localhost:3000");
     cy.contains("home").click();
-    cy.get('.social > a[href="https://twitter.com/cleandeveloper"]').click();
+    cy.get('.social > a[href="https://twitter.com/leadevt_dal"]').click();
   });
 
   it("can check skills cards from the skilss section", () => {
