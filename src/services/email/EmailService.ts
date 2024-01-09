@@ -35,13 +35,13 @@ export class EmailService {
       const resp = await axios.post(endpoint, data);
 
       if (resp.status >= 200 && resp.status <= 300) {
-        return "Message Successfully Sent";
+        return MESSAGE_SUCCESS;
       }
     } catch (e) {
-      return `Message Failed, ${e}`;
+      return MESSAGE_FAILED;
     }
 
-    return "Message Failed";
+    return MESSAGE_FAILED;
   }
 
   public getMailParams(): EmailServiceParams {
@@ -50,5 +50,8 @@ export class EmailService {
 }
 
 const emailService = new EmailService();
+
+export const MESSAGE_SUCCESS = "Message Successfully Sent";
+export const MESSAGE_FAILED = "Message Failed";
 
 export default emailService;

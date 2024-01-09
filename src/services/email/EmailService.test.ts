@@ -3,7 +3,11 @@
 /* eslint-disable testing-library/no-container */
 
 import axios from "axios";
-import emailService, { MailTemplate } from "./EmailService";
+import emailService, {
+  MESSAGE_FAILED,
+  MESSAGE_SUCCESS,
+  MailTemplate,
+} from "./EmailService";
 import { waitFor } from "@testing-library/react";
 
 describe("EmailServiceTest", () => {
@@ -20,7 +24,7 @@ describe("EmailServiceTest", () => {
     } as MailTemplate);
 
     waitFor(async () => {
-      expect(result).toEqual("Message Successfully Sent");
+      expect(result).toEqual(MESSAGE_SUCCESS);
     });
     expect(postMethod).toHaveBeenCalled();
   });
@@ -38,7 +42,7 @@ describe("EmailServiceTest", () => {
     } as MailTemplate);
 
     waitFor(async () => {
-      expect(result).toContain("Message Failed");
+      expect(result).toContain(MESSAGE_FAILED);
     });
     expect(postMethod).toHaveBeenCalled();
   });

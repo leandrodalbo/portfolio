@@ -32,7 +32,12 @@ const Skills = ({ service }: SkillsProps) => {
                       <span>{item.title}</span>
                     </div>
                     <div className="c-item-body">
-                      <ProgressBar now={item.fill} max={100} min={0} />
+                      <ProgressBar
+                        animated={true}
+                        now={item.fill}
+                        max={100}
+                        min={0}
+                      />
                     </div>
                   </div>
                 </Carousel.Item>

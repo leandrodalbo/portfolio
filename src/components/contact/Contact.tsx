@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import "./style.css";
 import { EmailService } from "../../services/email/EmailService";
-import { Form } from "react-bootstrap";
+import { Button, Form, Modal } from "react-bootstrap";
 
 interface EmailProps {
   service: EmailService;
@@ -13,8 +13,8 @@ const Contact = ({ service }: EmailProps) => {
   const [email, setEmail] = useState("");
   const [message, setMessage] = useState("");
 
-  const [isToastDisplayed, setIsToastDisplayed] = useState(false);
-  const [toastMessage, setToastMessage] = useState("");
+  const [isModalDisplayed, setIsModalDisplayed] = useState(false);
+  const [modalMessage, setModalMessage] = useState("");
 
   const cleanUp = () => {
     setName("");
@@ -23,14 +23,14 @@ const Contact = ({ service }: EmailProps) => {
     setEmail("");
   };
 
-  const showToast = (result: string) => {
-    setToastMessage(result);
-    setIsToastDisplayed(true);
+  const showModal = (result: string) => {
+    setModalMessage(result);
+    setIsModalDisplayed(true);
   };
 
-  const closeToast = () => {
-    setToastMessage("");
-    setIsToastDisplayed(false);
+  const closeModal = () => {
+    setModalMessage("");
+    setIsModalDisplayed(false);
   };
 
   const sendEmail = async () => {
@@ -41,32 +41,28 @@ const Contact = ({ service }: EmailProps) => {
       message,
     });
 
-    showToast(result);
+    showModal(result);
     cleanUp();
   };
 
   return (
     <section data-testid="contact" id="contact" className="py-5">
+      <Modal show={isModalDisplayed}>
+        <Modal.Header className="bg-info justify-content-center">
+          <Modal.Title className="text-dark">Message Info</Modal.Title>
+        </Modal.Header>
+
+        <Modal.Body className="px-3 bg-info text-dark d-flex justify-content-between ">
+          <p>{modalMessage}</p>
+          <span>
+            <Button className="text-dark bg-secondary" onClick={closeModal}>
+              Close
+            </Button>
+          </span>
+        </Modal.Body>
+      </Modal>
       <div className="container py-5">
         <div className="row py-5 ">
-          {isToastDisplayed && (
-            <div
-              aria-live="polite"
-              aria-atomic="true"
-              className="toast-polite-area"
-            >
-              <div className="toast-position">
-                <div
-                  className="toast show"
-                  role="alert"
-                  aria-live="assertive"
-                  aria-atomic="true"
-                >
-                  <button onClick={() => closeToast()}>{toastMessage}</button>
-                </div>
-              </div>
-            </div>
-          )}
           <div className="col py-5">
             <h1 className="d-flex justify-content-center">Message-Me</h1>
 

@@ -1,6 +1,8 @@
 /* eslint-disable testing-library/await-async-utils */
 import { render, screen, fireEvent, waitFor } from "@testing-library/react";
-import EmailService from "../../services/email/EmailService";
+import EmailService, {
+  MESSAGE_SUCCESS,
+} from "../../services/email/EmailService";
 import Contact from "./Contact";
 
 jest.mock("../../services/email/EmailService");
@@ -98,9 +100,9 @@ describe("ContactTest", () => {
 
     const success = jest
       .spyOn(emailService, "sendEmail")
-      .mockImplementation(() => Promise.resolve("Success"));
+      .mockImplementation(() => Promise.resolve(MESSAGE_SUCCESS));
 
-    const nameInput = screen.getByPlaceholderText("Email");
+    const nameInput = screen.getByPlaceholderText("Name");
     const emailInput = screen.getByPlaceholderText("Email");
     const subjInput = screen.getByPlaceholderText("Subject");
     const msgInput = screen.getByPlaceholderText("Message");
@@ -113,7 +115,7 @@ describe("ContactTest", () => {
     fireEvent.submit(screen.getByText("Send Message"));
 
     waitFor(async () => {
-      expect(screen.getByText("Success")).toBeInTheDocument();
+      expect(screen.getByText(MESSAGE_SUCCESS)).toBeInTheDocument();
     });
 
     expect(success).toBeCalledTimes(1);
